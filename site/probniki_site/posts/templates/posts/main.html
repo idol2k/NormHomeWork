@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-    {% for post in posts %}
-        <p>{{ post.title }}</p>
-        <i>{{ post.text }}</i>
-    {% endfor %}
+{%for post in posts  %}
+      <p>{{ post.title }}</p>
+      <i>{{ post.text }}</i>
+{% endfor %}
 </body>
 </html>
