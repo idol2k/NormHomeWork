@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends 'main.html' %}
+
+{% block content %}
+
+{% for posts in posts %}
+  <div>
+    <h2>{{ posts.title }}</h2>
+    <p>{{ posts.text }}</p>
+    <p>Created at: {{ posts.created_at }}</p>
+    <p>Category: {{ posts.category }}</p>
+    <p>Comment: {{ comment.text }}</p>
+    {% if posts.category in posts_category %}
+      <p>Max posts: {{ posts.category.posts_category }}</p>
+    {% else %}
+      <p>Max posts: Default</p>
+    {% endif %}
+    <a href="{% url 'delete_post' posts.id %}">Delete</a>
+    <a href="{% url 'update_post' posts.id %}">Update</a>
+    <a href="{% url 'view_post' posts.id %}">View</a>
+  </div>
+{% endfor %}
+{% endblock %}

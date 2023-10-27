@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Comment</title>
+</head>
+<body>
+    <h1>Create Comment</h1>
+    <form method="post" action="{% url 'comment' text=post.id %}">
+        {% csrf_token %}
+        <label for="text">Text:</label><br>
+        <textarea id="text" name="content" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Create Comment">
+    </form>
+</body>
+</html>
