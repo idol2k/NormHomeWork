@@ -1,6 +1,4 @@
-from .create_drf import CreateView
-from .read_drf import ReadView
-from .update_drf import UpdateView
-from .delete_drf import DeleteView
+from .create_drf import CreateView, ViewModel, DeleteView, ReadView, UpdateView
+from .view_serializer import PostsUserView
 
-ALL = (CreateView, ReadView, UpdateView, DeleteView)
+ALL = (CreateView, PostsUserView, ViewModel, DeleteView, ReadView, UpdateView)
